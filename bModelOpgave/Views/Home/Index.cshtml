@@ -1,0 +1,56 @@
+﻿@model Person
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>@Model.Navn</h1>
+    <hr />
+    <h3>@Model.Oprettet</h3>
+
+    <form action="Home/Index" method="post">
+
+        <div>
+            <label asp-for="Navn"></label>
+            <input asp-for="Navn" />
+            <span asp-validation-for="Navn"></span>
+        </div>
+
+        <div>
+            <label asp-for="Alder"></label>
+            <input asp-for="Alder" />
+            <span asp-validation-for="Alder"></span>
+        </div>
+
+        <div>
+            <label asp-for="ErAktiv"></label>
+            <input asp-for="ErAktiv" />
+        </div>
+
+        <div>
+            <label asp-for="Oprettet"></label>
+            <input asp-for="Oprettet" />
+        </div>
+
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+
+        <div>
+            <input type="submit" value="Send data" name="btn" />
+        </div>
+    </form>
+
+
+    <script src="~/Vendor/jquery/jquery.min.js"></script>
+    <script src="~/Vendor/jquery/jquery.validate.js"></script>
+    <script src="~/Vendor/jquery/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>
