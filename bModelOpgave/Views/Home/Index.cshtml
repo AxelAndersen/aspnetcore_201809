@@ -12,7 +12,7 @@
     <hr />
     <h3>@Model.Oprettet</h3>
 
-    <form action="Home/Index" method="post">
+    <form action="/Home/Index" method="post">
 
         <div>
             <label asp-for="Navn"></label>
@@ -41,6 +41,11 @@
             <input asp-for="Password" />
             <span asp-validation-for="Password"></span>
         </div>
+        
+        <div>
+            <label asp-for="UserLanguage"></label>
+            <input asp-for="UserLanguage" />            
+        </div>
 
         <div>
             <input type="submit" value="Send data" name="btn" />
@@ -48,9 +53,9 @@
     </form>
 
 
-    <script src="~/Vendor/jquery/jquery.min.js"></script>
-    <script src="~/Vendor/jquery/jquery.validate.js"></script>
-    <script src="~/Vendor/jquery/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/Vendor/jquery/jquery.min.js"></script>
+        <script src="~/Vendor/jquery/jquery.validate.js"></script>
+        <script src="~/Vendor/jquery/jquery.validate.unobtrusive.min.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,34 @@
+﻿@model Person
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Start side</title>
+    <link rel="stylesheet" type="text/css" href="~/Style/app.css" />
+</head>
+<body>
+    <h1>Start side</h1>
+    <h2>@DateTime.Now.ToLongTimeString()</h2>
+    <form action="/Home/Index" method="post">
+        <div>
+            Navn: <input type="text" name="navn" value="@Model.Navn" />
+        </div>
+
+        <div>
+            Alder: <input type="number" name="alder" value="@Model.Alder" />
+        </div>
+
+        <div>
+            Lande: <select name="landid">
+                        @foreach (var item in ViewBag.Lande)
+                        {
+                       <option value="@item.Id">@item.Navn</option>
+                        }
+                    </select>
+        </div>
+
+        <input type="submit" name="btn" value="Submit" />
+    </form>
+    @Model.LandId
+</body>
+</html>

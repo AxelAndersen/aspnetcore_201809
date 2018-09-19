@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cModelOpgave;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,20 +12,23 @@ namespace bModelOpgave.Models
         public int PersonId { get; set; }
 
         [Required]
-        [Display(ResourceType = typeof(side), Name ="navn")]
+        [Display(ResourceType = typeof(side), Name ="Name")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Forkert navn")]
         public string Navn { get; set; }
 
         [Required]
+        [Display(ResourceType = typeof(side), Name = "Age")]
         public int Alder { get; set; }
 
+        [Display(ResourceType = typeof(side), Name = "IsActive")]
         public bool ErAktiv { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime Oprettet  { get; set; }
-
-        [Required]
+        
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        public string UserLanguage { get; set; }
     }
 }

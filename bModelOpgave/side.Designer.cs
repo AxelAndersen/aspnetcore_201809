@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bModelOpgave {
+namespace cModelOpgave {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace bModelOpgave {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("bModelOpgave.side", typeof(side).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("cModelOpgave.side", typeof(side).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,29 @@ namespace bModelOpgave {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ***.
+        ///   Looks up a localized string similar to Age.
         /// </summary>
-        public static string navn {
+        public static string Age {
             get {
-                return ResourceManager.GetString("navn", resourceCulture);
+                return ResourceManager.GetString("Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is active.
+        /// </summary>
+        public static string IsActive {
+            get {
+                return ResourceManager.GetString("IsActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name eng.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
     }

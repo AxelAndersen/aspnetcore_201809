@@ -6,6 +6,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using bModelOpgave.Models;
 using bModelOpgave.Models.Configuration;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -28,9 +30,6 @@ namespace bModelOpgave.Controllers
         {
             logger.LogInformation("In index");
 
-            Thread.CurrentThread.CurrentCulture = new CultureInfo("de");
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
-
             PersonRepositoryMock rep = new PersonRepositoryMock();
             Person person =  rep.HentPerson();
 
@@ -40,11 +39,16 @@ namespace bModelOpgave.Controllers
         [HttpPost]
         public IActionResult Index(Person person)
         {
+            CultureInfo culture = new CultureInfo(person.UserLanguage);
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
+
             if (ModelState.IsValid)
             {
-                logger.LogInformation("Posted person");
-
-                return View(person);
+                return RedirectToAction("Index");
             }
             else
             {               
