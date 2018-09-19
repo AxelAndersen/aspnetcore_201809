@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Start side</title>
+    <link rel="stylesheet" type="text/css" href="~/Style/app.css" />
+</head>
+<body>
+    <h1>Start side</h1>
+
+    <a asp-route="Lager">Lager</a>
+
+    <br /><br />
+    <hr />
+    <br />
+    <p>På serveren er kl. @ViewBag.Kl, og på klienten <span id="time"></span>. Klientens tid burde opdateres løbende (js/jquery) og skrives i rød (css).</p>
+    <p>Denne værdi: '@ViewBag.Setting' kommer fra appsettings.json - bare for at teste at configuration er sat korrekt op.</p>
+    <script src="~/Vendor/jquery/jquery.min.js"></script>
+    <script src="~/Script/app.js"></script>
+</body>
+</html>

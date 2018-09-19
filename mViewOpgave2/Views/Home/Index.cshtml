@@ -1,0 +1,25 @@
+﻿@model Person
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Start side</title>
+    <link rel="stylesheet" type="text/css" href="~/Style/app.css" />
+</head>
+<body>
+
+    <h1>Start side</h1>
+
+    @await Component.InvokeAsync("PersonForm")
+
+   <vc:personform></vc:personform>   
+
+    @*<form action="/Home/Index" method="post">
+        <label asp-for="Navn"></label>
+        <input asp-for="Navn" />
+        <input type="hidden" value="@Model.PersonId" name="PersonId" />
+        <input type="submit" value="submit" />
+    </form>*@
+
+</body>
+</html>

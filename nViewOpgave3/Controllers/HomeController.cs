@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using jAttrRouting.Models.Configuration;
+using nViewOpgave3.Models.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace jAttrRouting.Controllers
+namespace nViewOpgave3.Controllers
 {
-    [Route("firma")]
     public class HomeController : Controller
     {
 
@@ -21,18 +20,10 @@ namespace jAttrRouting.Controllers
             this.logger = logger;
         }
 
-        [Route("lager")]
-        public IActionResult ssss()
+        public IActionResult Index()
         {
 
-            return Json("lager");
-        }
-
-        [Route("/")]
-        public IActionResult Home()
-        {
-
-            return Json("Hjemme");
+            return View();
         }
     }
 }

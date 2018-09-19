@@ -1,0 +1,8 @@
+﻿@model Person
+
+<form action="/Home/Index" method="post">
+    <label asp-for="Navn"></label>
+    <input asp-for="Navn" />
+    <input type="hidden" value="@Model.PersonId" name="PersonId" />
+    <input type="submit" value="submit" />
+</form>

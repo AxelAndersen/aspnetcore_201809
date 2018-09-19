@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using jAttrRouting.Models.Configuration;
+using mViewOpgave2.Models.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Cronberg;
 
-namespace jAttrRouting.Controllers
+namespace mViewOpgave2.Controllers
 {
-    [Route("firma")]
     public class HomeController : Controller
     {
 
@@ -21,18 +21,22 @@ namespace jAttrRouting.Controllers
             this.logger = logger;
         }
 
-        [Route("lager")]
-        public IActionResult ssss()
+        [HttpGet]
+        public IActionResult Index()
         {
+            LandeRepository rep = new LandeRepository();
+            var lande = rep.HentLande();
 
-            return Json("lager");
+            PersonRepository pRep = new PersonRepository();
+            var person = pRep.HentPerson();
+            return View(person);
         }
 
-        [Route("/")]
-        public IActionResult Home()
+        [HttpPost]
+        public IActionResult Index(Person p)
         {
 
-            return Json("Hjemme");
+            return Content($"{p.Navn} er blevet opdateret!");
         }
     }
 }

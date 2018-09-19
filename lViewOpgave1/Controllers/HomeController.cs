@@ -2,37 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using jAttrRouting.Models.Configuration;
+using Cronberg;
+using lViewOpgave1.Models.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace jAttrRouting.Controllers
+namespace lViewOpgave1.Controllers
 {
-    [Route("firma")]
     public class HomeController : Controller
     {
 
         private AppSettings appSetting;
         private ILogger logger;
+        private ILandeRepository _rep;
 
-        public HomeController(AppSettings appSetting, ILogger<HomeController> logger)
+        public HomeController(AppSettings appSetting, ILogger<HomeController> logger, ILandeRepository rep)
         {
             this.appSetting = appSetting;
             this.logger = logger;
+            this._rep = rep;
         }
 
-        [Route("lager")]
-        public IActionResult ssss()
+        public IActionResult Index()
         {
-
-            return Json("lager");
-        }
-
-        [Route("/")]
-        public IActionResult Home()
-        {
-
-            return Json("Hjemme");
+            var lande = _rep.HentLande();
+            return View(lande);
         }
     }
 }
