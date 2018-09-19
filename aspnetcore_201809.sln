@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gControllerOpgave", "gContr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hModelBinding", "hModelBinding\hModelBinding.csproj", "{22F54F64-A4A1-4D3A-A884-57E0B03D2797}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hRouteOpgave1", "hRouteOpgave1\hRouteOpgave1.csproj", "{A3433F4A-A168-4F70-AA7E-0B8B4BCC897D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jAttrRouting", "jAttrRouting\jAttrRouting.csproj", "{E23F9491-C935-4DFF-99AD-7F472286985D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{22F54F64-A4A1-4D3A-A884-57E0B03D2797}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22F54F64-A4A1-4D3A-A884-57E0B03D2797}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22F54F64-A4A1-4D3A-A884-57E0B03D2797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3433F4A-A168-4F70-AA7E-0B8B4BCC897D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3433F4A-A168-4F70-AA7E-0B8B4BCC897D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3433F4A-A168-4F70-AA7E-0B8B4BCC897D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3433F4A-A168-4F70-AA7E-0B8B4BCC897D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23F9491-C935-4DFF-99AD-7F472286985D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23F9491-C935-4DFF-99AD-7F472286985D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23F9491-C935-4DFF-99AD-7F472286985D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23F9491-C935-4DFF-99AD-7F472286985D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,6 +26,7 @@ namespace bModelOpgave.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(Duration = 30)]
         public IActionResult Index()
         {
             logger.LogInformation("In index");

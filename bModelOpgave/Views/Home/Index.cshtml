@@ -9,8 +9,9 @@
 </head>
 <body>
     <h1>@Model.Navn</h1>
-    <hr />
-    <h3>@Model.Oprettet</h3>
+    <hr />    
+
+    <h1>@DateTime.Now.ToLongTimeString()</h1>
 
     <form action="/Home/Index" method="post">
 
@@ -41,10 +42,10 @@
             <input asp-for="Password" />
             <span asp-validation-for="Password"></span>
         </div>
-        
+
         <div>
             <label asp-for="UserLanguage"></label>
-            <input asp-for="UserLanguage" />            
+            <input asp-for="UserLanguage" />
         </div>
 
         <div>
@@ -53,9 +54,9 @@
     </form>
 
 
-        <script src="~/Vendor/jquery/jquery.min.js"></script>
-        <script src="~/Vendor/jquery/jquery.validate.js"></script>
-        <script src="~/Vendor/jquery/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Vendor/jquery/jquery.min.js"></script>
+    <script src="~/Vendor/jquery/jquery.validate.js"></script>
+    <script src="~/Vendor/jquery/jquery.validate.unobtrusive.min.js"></script>
 
 </body>
 </html>
